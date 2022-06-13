@@ -30,8 +30,7 @@ jobs:
           name: Yarn - Cache update
           paths:
             - ./node_modules
-          key: |
-            yarn-cache-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
+          key: yarn-cache-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
 workflows:
   ball:
     jobs:
